@@ -6,7 +6,7 @@ class FlutterBcrypt {
 
   /// Create passworde hash for given password and salt.
   /// Password must be a plain UTF-8 compatible String.
-  /// Salt must be a string in Modular Crypt Format with $ separators
+  /// Sa must be a string in Modular Crypt Format with $ separators
   /// for example r'$2b$06$C6UzMDM.H6dfI/f/IKxGhu'
   static Future<String> hashPw(
       {@required String password, @required String salt}) async =>

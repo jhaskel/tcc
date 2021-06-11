@@ -8,7 +8,6 @@ import 'package:unigran_tcc/screens/cardapio/cardapio_edit.dart';
 import 'package:unigran_tcc/screens/cardapio/cardapio_page.dart';
 import 'package:unigran_tcc/screens/config/Config_page.dart';
 import 'package:unigran_tcc/screens/consultas/cosultas_page.dart';
-import 'package:unigran_tcc/screens/testes/teste1.dart';
 import 'package:unigran_tcc/screens/usuario/usuario.dart';
 import 'package:unigran_tcc/screens/af/afPage.dart';
 import 'package:unigran_tcc/screens/cart/cartPage.dart';
@@ -122,9 +121,6 @@ class PagesT extends StatelessWidget {
       return CardapioDetalhe();
     } else if (page == AppPages.cardapioEdit) {
       return CardapioEdit();
-
-      } else if (page == AppPages.teste) {
-      return Teste1();
     } else {
       return HomePage(user);
     }
