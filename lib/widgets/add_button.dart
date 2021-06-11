@@ -1,0 +1,22 @@
+
+import 'package:flutter/material.dart';
+
+class AddButton extends StatelessWidget {
+  final Function onPressed;
+
+  AddButton({@required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: IconButton(
+        icon: Icon(
+          Icons.add,
+          color: Colors.blue,
+        ),
+        onPressed: onPressed,
+      ),
+    );
+  }
+}

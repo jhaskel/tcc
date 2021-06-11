@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Ordem de Serviço.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ordem de serviço">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>merenda</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"> </script >
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-messaging.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"> </script >
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+
+    var config = {
+  apiKey: "AIzaSyDBhzY9R8mZJv_KiHvQIfF9ygaHMSPRhw4",
+    authDomain: "app-orse.firebaseapp.com",
+    databaseURL: "https://app-orse-default-rtdb.firebaseio.com",
+    projectId: "app-orse",
+    storageBucket: "app-orse.appspot.com",
+    messagingSenderId: "218115463372",
+    appId: "1:218115463372:web:00c4120931778affa24a69",
+    measurementId: "G-ZGVVDLJSFW"
+}
+    firebase.initializeApp(config);
+
+  </script>
+
+<script>
+    async function download() {
+      var pdfAsDataUri = "data:application/pdf;base64, " + pdfData;
+      var link = document.createElement('a');
+      link.download = filename;
+      link.href = pdfAsDataUri;
+      link.type = 'application/pdf';
+      link.click();
+    }
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+<script type="text/javascript">
+     pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js";
+</script>
+<script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
